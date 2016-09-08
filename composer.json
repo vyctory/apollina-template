@@ -1,8 +1,8 @@
 ﻿{
   "name": "las93/apollina2",
   "license": "MIT",
-  "version": "2.0.1-alpha",
-  "type": "libray",
+  "version": "2.0.2-alpha",
+  "type": "library",
   "description": "Templating in PHP",
   "keywords": ["templating", "php"],
   "homepage": "https://github.com/las93/apollina2",
@@ -18,8 +18,5 @@
   },
   "require": {
     "php": ">=7.0.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^4.8"
   }
 }
