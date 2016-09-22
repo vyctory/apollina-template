@@ -1,22 +1,22 @@
 {
-  "name": "vyctory/apollina-template",
-  "license": "MIT",
-  "version": "1.0.1",
-  "type": "library",
-  "description": "Templating in PHP",
-  "keywords": ["templating", "php"],
-  "homepage": "https://github.com/vyctory/apollina-template",
-  "authors": [
-    {
-      "name": "Paquet Judicaël",
-      "email": "judicael.paquet@gmail.com",
-      "role": "CIO"
+    "name": "vyctory/apollina-template",
+    "license": "MIT",
+    "version": "1.0.2",
+    "type": "library",
+    "description": "templating in PHP",
+    "keywords": ["orm"],
+    "homepage": "https://github.com/vyctory/apollina-template",
+    "authors": [
+        {
+            "name": "Paquet Judicaël",
+            "email": "las92i@hotmail.fr",
+            "role": "CIO"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Apollina\\": "Apollina/" }
+    },
+    "require": {
+        "php": ">=7.0.0"
     }
-  ],
-  "autoload": {
-    "psr-4": { "Apollina\\": "Apollina/" }
-  },
-  "require": {
-    "php": ">=7.0.0"
-  }
 }
