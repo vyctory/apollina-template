@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Les variables dans Appolina template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">Les variables dans Appolina template</h1>
+    <h2 class="project-tagline">Attila est un ORM PHP</h2>
+    <a href="https://github.com/vyctory/venusframework" class="btn">Vu sur GitHub</a>
+    <a href="https://github.com/vyctory/venusframework/zipball/master" class="btn">Télécharger .zip</a>
+    <a href="https://github.com/vyctory/venusframework/tarball/master" class="btn">Télécharger .tar.gz</a>
+</section>
+
+<section class="main-content">
+
+    <a href="modifiers.html">[précédent]</a>
+
+    <h3>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span>
+        </a>Les variables</h3>
+
+    Les variables du moteur de template de Venus Framework est relativement simple à utiliser tout en proposant une
+    grande complexité.<br/><br/>
+    Si vous assignez un tableau avec un index numérique, vous pourrez afficher le contenu du tableau.<br/><br/>
+
+    <pre>
+$this->view
+     ->assign(‘test’, array(12.36));</pre>
+
+    <pre>{$test[0]}</pre>
+
+    Si vous assignez un tableau avec un index alphanumérique, vous pourrez afficher le contenu du tableau.<br/><br/>
+
+    <pre>
+$this->view
+     ->assign(‘test’, array(‘prenom’ => ‘John’));</pre>
+
+    <pre>{$test.prenom}</pre>
+
+    Si vous assignez un tableau avec un index alphanumérique, vous pourrez afficher le contenu du tableau en appelant
+    l’index dynamiquement.<br/><br/>
+
+    <pre>
+$this->view
+     ->assign(‘test’, array(‘prenom’ => ‘John’))
+     ->assign(‘index’, ‘prenom’);</pre>
+
+    <pre>{$test.$index}</pre>
+
+    Si vous assignez un objet, vous pourrez afficher le contenu des paramètres d’objets.<br/><br/>
+
+    <pre>
+$oObject = new \StdClass;
+$oObject->prenom = ‘john’;
+$this->view
+     ->assign(‘test’, $oObject)
+</pre>
+
+    <pre>{$test->prenom}</pre>
+
+    Si vous assignez un objet, vous pourrez afficher le retour d’une de ses méthodes.<br/><br/>
+
+    <pre>
+Class Foo {
+
+    public function show() { echo ‘oui’; }
+}
+
+$oObject = new Foo;
+
+$this->view
+     ->assign(‘test’, $oObject)</pre>
+
+    <pre>{$test->show()}</pre>
+
+    Vous pouvez également ensuite mettre des enchaînements des méthodes ci-dessus ainsi que placer des opérations
+    arithmétiques comme {$foo[$x+1]}.<br/><br/>
+
+    <a href="conditions.html">[suivant]</a>
+
+    </body>
+</html>

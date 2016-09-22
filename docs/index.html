@@ -24,9 +24,41 @@
             <span aria-hidden="true" class="octicon octicon-link"></span>
         </a>Getting Start</h3>
 
-        Documentation en cours d'écriture...
+    Dans un framework MVC, il est indispensable de gérer des vues. Apollina Template vient justement proposer ce rôle où
+    les vues sont des templates qui proposent de nombreuses possibilités dynamiques.<br/><br/>
+    Cela évite de de faire du PHP dasn le code et de bien fermer ces vues pour qu'elles soient dynamiques mais pas
+    bordéliques.<br/><br/>
+    Voici un premier exemple simple qui présente la syntaxe utilisée par Apollina Template :<br/><br/>
 
-        <a href="xxxx.html">[suivant]</a>
+    <pre>
+{foreach from=$Exemple key=$iKey item=$oExemple}
+
+	{$oExemple->get_title()} - {$oExemple->get_id()}
+
+{/foreach}</pre>
+
+    Les templates proposent comme vous le voyez ci-dessus, un foreach proche du php pour parcourir un tableau complet.
+    <br/><br/>
+    Les templates proposent deux types de méthodes : les modifiers et les fonctions.<br/><br/>
+    Les modifiers vont permettre de modifier la variable proposée juste avant de l’afficher comme l’exemple ci-dessous :
+    <br/><br/>
+    {$title|capitalize} => va mettre le contenu de $title avec une majuscule sur le premier caractère.<br/><br/>
+    Les fonctions qui vont demander des paramètres d’entrées, vont permettre d’excuter quelque chose (et pas appliquer
+    une simple modification avant sortie). Voici un exemple :<br/><br/>
+    {foreach from=$array key=$iKey item=$oArticle}{/foreach} => comme un foreach en PHP.<br/><br/>
+    Une vue n’a accès aux variables que si le contrôleur lui en donne l’autorisation en assignant une variable au
+    template. Nous l’avions déjà vu dans ce document sous cette forme (ici c'est un exemple venant de Venus Framework) :
+    <br/><br/>
+
+    <pre>
+$this->view
+     ->assign('Exemple', $aExemple)
+     ->display();</pre>
+
+    Dans le contrôleur, on assigne une variable au template (assign() ) avant delancer le template (display() ). La
+    variable $Exemple sera donc utilisable dans le template appelé.<br/><br/>
+
+    <a href="variables.html">[suivant]</a>
 
     </body>
 </html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Variables pré-définies et commentaires des templates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">Variables pré-définies et commentaires des templates</h1>
+    <h2 class="project-tagline">Attila est un ORM PHP</h2>
+    <a href="https://github.com/vyctory/venusframework" class="btn">Vu sur GitHub</a>
+    <a href="https://github.com/vyctory/venusframework/zipball/master" class="btn">Télécharger .zip</a>
+    <a href="https://github.com/vyctory/venusframework/tarball/master" class="btn">Télécharger .tar.gz</a>
+</section>
+
+<section class="main-content">
+
+    <a href="index.html">[précédent]</a>
+
+    <h3>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span>
+        </a>Variables pré-définies et commentaires des templates</h3>
+
+    Dans les templates d'Apollina, il existe de nombreuses variables pré-définies afin d’accélérer la tache des
+    développeurs/intégrateurs.<br/><br/>
+
+    {counter} => permet d’afficher le numéro de boucles (pour les for par exemple)<br/><br/>
+
+    {$SCRIPT_NAME} => permet d’afficher la variable $_SERVER[‘SCRIPT_NAME’]<br/><br/>
+
+    {* et *} => entourent des commentaires. Ceci ne s’affichera pas sur le site, c’est uniquement pour mettre des
+    repères pour les développeurs/intégrateurs au sein du code source.<br/><br/>
+
+    {literal} et {/literal} => permettent d’entourer du contenu statique. En gros le moteur de templating n’ira pas
+    retraduire ce qu’il lit entre ces deux balises. C’est essentiel pour faire du javascript où les caractère { et }
+    portent confusion avec le framework.<br/><br/>
+
+    {$app.server} => représente la variable PHP $_SERVER ;<br/><br/>
+
+    {$app.get} => représente la variable PHP $_GET ;<br/><br/>
+
+    {$app.post} => représente la variable PHP $_POST ;<br/><br/>
+
+    {$app.cookies} => représente la variable PHP $_COOKIES ;<br/><br/>
+
+    {$app.env} => représente la variable PHP $_ENV ;<br/><br/>
+
+    {$app.session} => représente la variable PHP $_SESSION ;<br/><br/>
+
+    {$app.request} => représente un merge de toutes les variables tableaux dans ce sens strictement prioritaire : $_GET,
+    $_POST, $_COOKIES, $_SERVER, $_ENV.<br/><br/>
+
+    {$app.now} => représente le timestamp du moment<br/><br/>
+
+    {$app.conf} => représente toutes les constantes PHP définient.<br/><br/>
+
+    {$app.template} => affiche le nom du template en cours<br/><br/>
+
+    {$app.template_object} => affiche l’object du template en cours.<br/><br/>
+
+    {$app.current_dir} => affiche le dossier du template en cours<br/><br/>
+
+    {$app.version} => représente le numéro de version du système de template utilisé<br/><br/>
+
+    {$app.ldelim} et {$app.rdelim} => représente les délimiteurs définissant {literal} et {/literal} que l’on peut
+    reconfigurer à sa guise.<br/><br/>
+
+
+    <a href="modifiers.html">[suivant]</a>
+
+    </body>
+</html>

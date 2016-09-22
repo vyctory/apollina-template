@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <title>Les modifiers dans Appolina template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+</head>
+<body>
+<section class="page-header">
+    <h1 class="project-name">Les modifiers dans Appolina template</h1>
+    <h2 class="project-tagline">Attila est un ORM PHP</h2>
+    <a href="https://github.com/vyctory/venusframework" class="btn">Vu sur GitHub</a>
+    <a href="https://github.com/vyctory/venusframework/zipball/master" class="btn">Télécharger .zip</a>
+    <a href="https://github.com/vyctory/venusframework/tarball/master" class="btn">Télécharger .tar.gz</a>
+</section>
+
+<section class="main-content">
+
+    <a href="variables.html">[précédent]</a>
+
+    <h3>
+        <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true">
+            <span aria-hidden="true" class="octicon octicon-link"></span>
+        </a>Les Modifiers des templates</h3>
+
+    Les modifiers permettent de modifier une variable avant de l’afficher. Voici les différents modifiers que vous
+    pourrez utiliser dans vos templates.<br/><br/>
+
+    {$test|capitalize}<br/><br/>
+    permet de mettre chaque première lettre des mots en majuscule<br/><br/>
+
+    {$test|capitalize:true}<br/><br/>
+    Le premier paramètre permet de définir si on transforme ou non les mots qui ont un caractère numérique comme par
+    exemple php5.<br/><br/>
+
+    {$test|capitalize:true:true}<br/><br/>
+    Le deuxième paramètre permet de définir si tous les autres caractères sont transformés en caractères minuscules.
+    <br/><br/>
+
+    {$test|cat:' ajouté du texte'}<br/><br/>
+    permet de mettre chaque première lettre des mots en majuscule<br/><br/>
+
+    {$test|count_characters}<br/><br/>
+    permet de compter le nombre de caractères sauf les espaces<br/><br/>
+
+    {$test|count_characters:true}<br/><br/>
+    permet de compter le nombre de caractères avec les espaces<br/><br/>
+
+    {$test|count_paragraphs}<br/><br/>
+    permet de compter le nombre de paragraphes<br/><br/>
+
+    {$test|count_sentences}<br/><br/>
+    permet de compter le nombre de parties séparées par des ., ?, !.<br/><br/>
+
+    {$test|date_format}<br/><br/>
+    Affiche une date sous la forme : Mon, 19 May 2014 17:42:51<br/><br/>
+
+    {$test|date_format:'%b %e, %Y'}<br/><br/>
+    Formater sa date (voir en php strftime). %h devient %b, %n devient \n, %r devient %I:%M:%S %p, %R devient %H:%M, %t
+    devient \t et %T devient %H:%M:%S.<br/><br/>
+
+    {$test|default:'texte par défaut'}<br/><br/>
+    permet d’afficher un texte par défaut si la variable est vide ou null.<br/><br/>
+
+    {$test|escape}<br/><br/>
+    permet d’échapper selon différents critères désirés : html, htmlall, url, urlpathinfo, quotes, javascript.<br/><br/>
+    {$test|escape:'url'}<br/>
+    {$test|escape:'html':'UTF-8'}<br/>
+
+    {$test|from_charset}<br/><br/>
+    permet d’encoder du charset ISO-8859-1 au charset actuel<br/><br/>
+
+    {$test|from_charset:' ISO-8859-1'}<br/><br/>
+    Permet d’encoder du charset precisé au charset actuel<br/><br/>
+
+    {$test|hour}<br/><br/>
+    permet d’afficher que 17:12 quand on met 2014-05-05 17:12:30<br/><br/>
+
+    {$test|indent}<br/><br/>
+    permet d’indenter du texte (en HTML il faut mettre des balises &lt;bloquote&gt;) de 4 espaces<br/><br/>
+    {$test|indent:4}<br/>
+    {$test|indent:4:' '}<br/>
+    Voici les paramètres si vous désirez les changer.<br/><br/>
+
+    {$test|regex_replace:'/oui/':'non'}<br/><br/>
+    Remplacer les oui par non par expression régulière<br/><br/>
+
+    {$test|replace:'oui':'non'}<br/><br/>
+    Remplacer les oui par non comme un simple str_replace<br/><br/>
+
+    {$test|spacify}<br/><br/>
+    Sépare chaque mot par un espace<br/><br/>
+    {$test|spacify:'^^'}<br/>
+    Sépare chaque mot de ^^<br/><br/>
+
+    {$test|string_format:'%d'}<br/><br/>
+    Transformer une chaîne ou un chiffre sous le format désiré (voir sprintf en PHP pour les formats)<br/><br/>
+
+    {$test|strip}<br/><br/>
+    Remplace tous les caractères d’espacement en simple espace pour les formats)<br/><br/>
+    {$test|strip:'&nbsp;'}<br/>
+    Remplace tous les caractères d’espacement en &nbsp;<br/><br/>
+
+    {$test|strip_tag}<br/><br/>
+    Remplace toutes les balises par un espace pour les formats)<br/>
+    {$test|strip:false}<br/>
+    Remplace toutes les balises par rien<br/><br/>
+
+    {$test|nl2br}<br/><br/>
+    permet de transformer les \n en &lt;br/&gt;<br/><br/>
+
+    {$test|to_charset}<br/><br/>
+    permet d’encoder du charset actuel au charset ISO-8859-1<br/>
+    {$test|to_charset:' ISO-8859-1'}<br/>
+    Permet d’encoder du charset actuel au charset precisé<br/><br/>
+
+    {$test|truncate}<br/><br/>
+    permet de couper les phrases à X caractères<br/>
+    {$test|truncate:30:'…':false:false}<br/>
+    Les paramètres permettre successivement de choisir le nombre de caractère avant de couper le contenu, ensuite de
+    décider ce qu’on ajoute après le contenu comme les 3 points, ensuite on détermine si on coupe après le dernier mot
+    ou directement au caractère 30 et le dernier paramètre permet de définir si on coupe en prenant le milieu de la
+    chaîne de caractère en référence et non le début de la chaine.<br/>
+    {$test|unescape}<br/>
+    permet d’échapper selon différents critères désirés : html, htmlall<br/>
+    {$test|unescape:'html'}<br/>
+    {$test|unescape:'html':'UTF-8'}<br/><br/>
+
+    {$test|lower}<br/><br/>
+    permet de mettre toutes les lettres en minuscule<br/><br/>
+
+    {$test|upper}<br/><br/>
+    permet de mettre toutes les lettres en majuscule<br/><br/>
+
+    {$test|wordwrap}<br/><br/>
+    permet d’aller à la ligne tous les 75 caractères.<br/>
+    {$test|wordwrap:30:'&lt;br/&gt;':true}<br/>
+    Permet de mettre des <br/> pour aller à la ligne en HTML tous les 30 caractères et au caractère exact (et non après
+    le dernier mot en mettant false).<br/><br/>
+
+    <a href="variables2.html">[suivant]</a>
+
+    </body>
+</html>
