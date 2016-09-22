@@ -1,11 +1,11 @@
 {
   "name": "vyctory/apollina-template",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "library",
   "description": "Templating in PHP",
   "keywords": ["templating", "php"],
-  "homepage": "https://github.com/las93/apollina2",
+  "homepage": "https://github.com/vyctory/apollina-template",
   "authors": [
     {
       "name": "Paquet Judicaël",
