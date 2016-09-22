@@ -1,7 +1,7 @@
 {
     "name": "vyctory/apollina-template",
     "license": "MIT",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "type": "library",
     "description": "templating in PHP",
     "keywords": ["orm"],
